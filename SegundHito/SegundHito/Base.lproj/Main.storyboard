@@ -45,7 +45,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="gY4-p8-QjD"/>
+                                    <action selector="clickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCr-0z-fqx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-OO-vYg">
@@ -71,7 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="XG4-cQ-aMW" id="aiB-mc-cVx"/>
-                        <outlet property="btnRegistrar" destination="ggS-OO-vYg" id="WEy-1v-zRQ"/>
+                        <outlet property="btnRegistrar" destination="ggS-OO-vYg" id="d4r-IS-W6n"/>
                         <outlet property="txtPasswordLogin" destination="WP4-bE-8da" id="0Zh-KH-ucP"/>
                         <outlet property="txtUser" destination="KAT-9L-GoF" id="rei-ZX-228"/>
                         <segue destination="X9C-3B-mzA" kind="show" identifier="trLoginCorr" customClass="ViewControllerLogin" customModule="SegundHito" customModuleProvider="target" id="ygH-EZ-XMh"/>

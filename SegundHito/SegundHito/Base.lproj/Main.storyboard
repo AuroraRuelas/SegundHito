@@ -45,7 +45,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrd-JR-ZhM"/>
+                                    <action selector="clickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="gY4-p8-QjD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-OO-vYg">
@@ -55,7 +55,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NpQ-1Y-oMd" kind="show" id="pTc-qu-Gww"/>
+                                    <segue destination="NpQ-1Y-oMd" kind="show" identifier="trLoginCorr" customClass="ViewControllerLogin" customModule="SegundHito" customModuleProvider="target" id="pTc-qu-Gww"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-vi-00u">
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-412" y="-422.33883058470769"/>
+            <point key="canvasLocation" x="-302" y="-677"/>
         </scene>
         <!--View Controller Registrar-->
         <scene sceneID="3W0-3r-1eZ">

@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SegundHito' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SegundHito
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+  target 'SegundHitoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SegundHitoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+
+  end
+
+end

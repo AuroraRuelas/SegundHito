@@ -38,7 +38,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG4-cQ-aMW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG4-cQ-aMW" userLabel="btnLogin">
                                 <rect key="frame" x="158" y="346" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
@@ -48,14 +48,14 @@
                                     <action selector="clickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCr-0z-fqx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-OO-vYg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-OO-vYg" userLabel="btnRegistrar">
                                 <rect key="frame" x="146" y="384" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Registrar">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NpQ-1Y-oMd" kind="show" identifier="trLoginCorr" customClass="ViewControllerLogin" customModule="SegundHito" customModuleProvider="target" id="pTc-qu-Gww"/>
+                                    <segue destination="NpQ-1Y-oMd" kind="show" identifier="trLoginCorr" id="pTc-qu-Gww"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-vi-00u">
@@ -74,12 +74,12 @@
                         <outlet property="btnRegistrar" destination="ggS-OO-vYg" id="d4r-IS-W6n"/>
                         <outlet property="txtPasswordLogin" destination="WP4-bE-8da" id="0Zh-KH-ucP"/>
                         <outlet property="txtUser" destination="KAT-9L-GoF" id="rei-ZX-228"/>
-                        <segue destination="X9C-3B-mzA" kind="show" identifier="trLoginCorr" customClass="ViewControllerLogin" customModule="SegundHito" customModuleProvider="target" id="ygH-EZ-XMh"/>
+                        <segue destination="X9C-3B-mzA" kind="show" identifier="trLoginCorr" id="ygH-EZ-XMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2098" y="-1166"/>
+            <point key="canvasLocation" x="-2098.4000000000001" y="-1166.2668665667168"/>
         </scene>
         <!--View Controller Registrar-->
         <scene sceneID="3W0-3r-1eZ">
@@ -143,7 +143,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="clickOKRegistro" destination="NpQ-1Y-oMd" eventType="touchUpInside" id="Ybj-uV-yQY"/>
+                                    <action selector="clickOKRegistro" destination="NpQ-1Y-oMd" eventType="touchUpInside" id="M3B-nw-skB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-QA-ukI">
@@ -167,16 +167,17 @@
                     </view>
                     <connections>
                         <outlet property="btnCancelar" destination="c5F-QA-ukI" id="wOs-mC-fRe"/>
-                        <outlet property="btnOK" destination="HfI-jx-jGt" id="qZg-tW-eJg"/>
+                        <outlet property="btnOK" destination="HfI-jx-jGt" id="b6d-wB-vPb"/>
                         <outlet property="txtEmail" destination="MlO-SH-kVR" id="Kls-tt-lfu"/>
                         <outlet property="txtPasswordRegistro" destination="U55-2A-Rbb" id="Sd4-az-ySo"/>
                         <outlet property="txtPasswordRegistroRep" destination="7sh-lB-3UG" id="SiT-kU-MyV"/>
                         <outlet property="txtUserRegistro" destination="y0Y-os-s2I" id="taM-Vg-V2F"/>
+                        <segue destination="X9C-3B-mzA" kind="show" identifier="trRegistroCorr" id="b36-bD-tg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHy-8J-ygC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2098" y="-143"/>
+            <point key="canvasLocation" x="-2442" y="-392"/>
         </scene>
         <!--Item-->
         <scene sceneID="lH5-Xv-PVs">
@@ -295,5 +296,8 @@
             <point key="canvasLocation" x="-874" y="-716"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ygH-EZ-XMh"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

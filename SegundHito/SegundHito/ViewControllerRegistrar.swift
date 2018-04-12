@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ViewControllerRegistrar: UIViewController {
     
@@ -22,6 +23,8 @@ class ViewControllerRegistrar: UIViewController {
         if txtPasswordRegistro?.text==txtPasswordRegistroRep?.text{
             print("IF")
         self.performSegue(withIdentifier: "trRegistroCorr", sender: self)
+            // Add a new document with a generated ID
+         
         }
     }
     
@@ -39,8 +42,18 @@ class ViewControllerRegistrar: UIViewController {
         Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPasswordRegistro?.text)!){
             (user , error) in
             if (user != nil){
-                print("Te Registraste Con User ID:" + (user?.uid)!)
-                 self.performSegue(withIdentifier: "trRegistro", sender: self)
+             
+               DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!).setData( [
+                    "first": "Ada",
+                    "last": "Lovelace",
+                    "born": 1815
+                ]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print(error!)
+                    }
+                }
             }
             else{
                 print(error!)

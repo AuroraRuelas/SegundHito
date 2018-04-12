@@ -10,8 +10,11 @@ import UIKit
 import Firebase
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
-    var sNick:String = "Aurora"
+    var firestoreDB:Firestore?
+//    var sNick:String = "Aurora"
+    
     func initFirebase()  {
         FirebaseApp.configure()
+        firestoreDB = Firestore.firestore()
     }
 }

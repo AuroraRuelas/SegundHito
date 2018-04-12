@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewControllerLogin: UIViewController {
     @IBOutlet var txtUser:UITextField?
@@ -34,8 +35,24 @@ class ViewControllerLogin: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+    @IBAction func accionLogin(){
+                Auth.auth().signIn(withEmail: (txtUser?.text)!, password: (txtPasswordLogin?.text)!){
+            (user , error) in
+                if (user != nil){
+                    let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!)
+                        refPerfil?.getDocument { (document , error) in
+                        if document != nil {
+                            print(document?.data())
+                            }else{
+                                print(error!)
+                            }
+                       
+                    }
+               
+                }
+            
+            }
+    }
     /*
     // MARK: - Navigation
 

@@ -29,9 +29,9 @@ class ViewControllerRegistrar: UIViewController {
                 if (user != nil){
                     self.performSegue(withIdentifier: "trRegistroCorr", sender: self)
                     DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!).setData( [
-                        "first": "Ada",
-                        "last": "Lovelace",
-                        "born": 1815
+                        "first": self.txtUserRegistro?.text,
+                        "email": self.txtEmail?.text,
+                        "password": self.txtPasswordRegistro?.text
                     ]) { err in
                         if let err = err {
                             print("Error adding document: \(err)")

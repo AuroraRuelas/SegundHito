@@ -22,9 +22,29 @@ class ViewControllerRegistrar: UIViewController {
         print("Usuario Pulso OK")
         if txtPasswordRegistro?.text==txtPasswordRegistroRep?.text{
             print("IF")
-        self.performSegue(withIdentifier: "trRegistroCorr", sender: self)
+        
             // Add a new document with a generated ID
-         
+            Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPasswordRegistro?.text)!){
+                (user , error) in
+                if (user != nil){
+                    self.performSegue(withIdentifier: "trRegistroCorr", sender: self)
+                    DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!).setData( [
+                        "first": "Ada",
+                        "last": "Lovelace",
+                        "born": 1815
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                        } else {
+//                            print(error!)
+                        }
+                    }
+                }
+                else{
+                    print(error!)
+                }
+            }
+            
         }
     }
     
@@ -38,29 +58,29 @@ class ViewControllerRegistrar: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func accionRegistrar(){
-        Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPasswordRegistro?.text)!){
-            (user , error) in
-            if (user != nil){
-             
-               DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!).setData( [
-                    "first": "Ada",
-                    "last": "Lovelace",
-                    "born": 1815
-                ]) { err in
-                    if let err = err {
-                        print("Error adding document: \(err)")
-                    } else {
-                        print(error!)
-                    }
-                }
-            }
-            else{
-                print(error!)
-            }
-        }
-       
-    }
+//    @IBAction func accionRegistrar(){
+////        Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPasswordRegistro?.text)!){
+////            (user , error) in
+////            if (user != nil){
+////
+////               DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!).setData( [
+////                    "first": "Ada",
+////                    "last": "Lovelace",
+////                    "born": 1815
+////                ]) { err in
+////                    if let err = err {
+////                        print("Error adding document: \(err)")
+////                    } else {
+////                        print(error!)
+////                    }
+////                }
+////            }
+////            else{
+////                print(error!)
+////            }
+////        }
+////
+//    }
 
     /*
     // MARK: - Navigation

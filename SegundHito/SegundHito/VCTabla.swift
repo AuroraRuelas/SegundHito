@@ -15,10 +15,37 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
         return 5;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "miCelda")!
+        let cell:TVCell = tableView.dequeueReusableCell(withIdentifier: "miCelda") as! TVCell
+        if(indexPath.row==0){
+        cell.labelNombre?.text="Chimichanga"
+//        cell.imagen?.image=
+        }
+        else if(indexPath.row==1){
+             cell.labelNombre?.text="Piñata"
+            //        cell.imagen?.image=
+        }
+        else if(indexPath.row==2){
+             cell.labelNombre?.text="Katanas"
+            //        cell.imagen?.image=
+        }
+        else if(indexPath.row==3){
+             cell.labelNombre?.text="Dead"
+            //        cell.imagen?.image=
+        }
+        else if(indexPath.row==4){
+             cell.labelNombre?.text="Pool"
+            //        cell.imagen?.image=
+        }
         return cell
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("He seleccionado" , indexPath.row)
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("He Deseleccionado" , indexPath.row)
+    }
     
     
     

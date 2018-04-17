@@ -18,23 +18,23 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
         let cell:TVCell = tableView.dequeueReusableCell(withIdentifier: "miCelda") as! TVCell
         if(indexPath.row==0){
         cell.labelNombre?.text="Chimichanga"
-//        cell.imagen?.image=
+        cell.imagen?.image=#imageLiteral(resourceName: "chimichanga.jpg")
         }
         else if(indexPath.row==1){
              cell.labelNombre?.text="Piñata"
-            //        cell.imagen?.image=
+                    cell.imagen?.image=#imageLiteral(resourceName: "Pinata.jpg")
         }
         else if(indexPath.row==2){
              cell.labelNombre?.text="Katanas"
-            //        cell.imagen?.image=
+                    cell.imagen?.image=#imageLiteral(resourceName: "katanas.png")
         }
         else if(indexPath.row==3){
              cell.labelNombre?.text="Dead"
-            //        cell.imagen?.image=
+                    cell.imagen?.image=#imageLiteral(resourceName: "deasd.png")
         }
         else if(indexPath.row==4){
              cell.labelNombre?.text="Pool"
-            //        cell.imagen?.image=
+                    cell.imagen?.image=#imageLiteral(resourceName: "pool.png")
         }
         return cell
         

@@ -14,14 +14,14 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet var txtPasswordLogin:UITextField?
     @IBOutlet var btnLogin:UIButton?
     @IBOutlet var btnRegistrar:UIButton?
-    @IBAction func clickLogin(){
-        print(" Usuario Pulso Login "+(txtPasswordLogin?.text)!)
-        if txtUser?.text=="Aurora" && txtPasswordLogin?.text=="1234"{
-            print("IF")
-            self.performSegue(withIdentifier: "trLoginCorr", sender: self)
-            
-        }
-    }
+//    @IBAction func clickLogin(){
+//        print(" Usuario Pulso Login "+(txtPasswordLogin?.text)!)
+//        if txtUser?.text=="Aurora" && txtPasswordLogin?.text=="1234"{
+//            print("IF")
+//            self.performSegue(withIdentifier: "trLoginCorr", sender: self)
+//
+//        }
+//    }
     
     
     
@@ -42,6 +42,10 @@ class ViewControllerLogin: UIViewController {
                     let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!)
                         refPerfil?.getDocument { (document , error) in
                         if document != nil {
+                            DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
+                            self.performSegue(withIdentifier: "trLoginCorr", sender: self)
+
+                                
                             print(document?.data())
                             }else{
                                 print(error!)
@@ -49,6 +53,9 @@ class ViewControllerLogin: UIViewController {
                        
                     }
                
+                }
+                else{
+                    print(error!)
                 }
             
             }

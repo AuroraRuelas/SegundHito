@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448EEBA12085DCC60028A72A /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EEBA02085DCC60028A72A /* Perfiles.swift */; };
+		448EEBA52085F4AF0028A72A /* VCTabla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EEBA42085F4AF0028A72A /* VCTabla.swift */; };
 		44C313B2207CA77200FA6670 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44C313B1207CA77200FA6670 /* GoogleService-Info.plist */; };
 		44C313B4207CAEDB00FA6670 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C313B3207CAEDB00FA6670 /* DataHolder.swift */; };
 		44C313B6207CB1F400FA6670 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C313B5207CB1F400FA6670 /* ViewControllerLogin.swift */; };
@@ -44,6 +46,8 @@
 		02726D4BA390C481DAA858F7 /* Pods_SegundHitoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegundHitoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A14978C69E9D18226B8549 /* Pods-SegundHitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegundHitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegundHitoUITests/Pods-SegundHitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A9F468CC3D39ADEB31AE851 /* Pods_SegundHitoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegundHitoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		448EEBA02085DCC60028A72A /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
+		448EEBA42085F4AF0028A72A /* VCTabla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTabla.swift; sourceTree = "<group>"; };
 		44C313B1207CA77200FA6670 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44C313B3207CAEDB00FA6670 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		44C313B5207CB1F400FA6670 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
@@ -127,9 +131,11 @@
 				44F370F7207C9CA700093323 /* ViewController.swift */,
 				44C313B7207CB9B200FA6670 /* ViewControllerRegistrar.swift */,
 				44F370F9207C9CA700093323 /* Main.storyboard */,
+				448EEBA42085F4AF0028A72A /* VCTabla.swift */,
 				44F370FC207C9CA700093323 /* Assets.xcassets */,
 				44F370FE207C9CA700093323 /* LaunchScreen.storyboard */,
 				44F37101207C9CA700093323 /* Info.plist */,
+				448EEBA02085DCC60028A72A /* Perfiles.swift */,
 				44C313B3207CAEDB00FA6670 /* DataHolder.swift */,
 				44C313B5207CB1F400FA6670 /* ViewControllerLogin.swift */,
 			);
@@ -491,7 +497,9 @@
 			files = (
 				44C313B6207CB1F400FA6670 /* ViewControllerLogin.swift in Sources */,
 				44C313B8207CB9B200FA6670 /* ViewControllerRegistrar.swift in Sources */,
+				448EEBA52085F4AF0028A72A /* VCTabla.swift in Sources */,
 				44F370F8207C9CA700093323 /* ViewController.swift in Sources */,
+				448EEBA12085DCC60028A72A /* Perfiles.swift in Sources */,
 				44C313B4207CAEDB00FA6670 /* DataHolder.swift in Sources */,
 				44F370F6207C9CA700093323 /* AppDelegate.swift in Sources */,
 			);

@@ -13,6 +13,8 @@ class DataHolder: NSObject {
     var firestoreDB:Firestore?
 //    var sNick:String = "Aurora"
     
+    var miPerfil:Perfiles = Perfiles()
+    
     func initFirebase()  {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()

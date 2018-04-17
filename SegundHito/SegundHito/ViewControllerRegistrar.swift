@@ -19,6 +19,10 @@ class ViewControllerRegistrar: UIViewController {
     @IBOutlet var btnOK:UIButton?
     @IBOutlet var btnCancelar:UIButton?
     @IBAction func clickOKRegistro(){
+        DataHolder.sharedInstance.miPerfil.sNombre = "Karyna"
+        DataHolder.sharedInstance.miPerfil.sEmail = "karyna.aurora@gmail.com"
+        DataHolder.sharedInstance.miPerfil.sPassword = "123456"
+   
         print("Usuario Pulso OK")
         if txtPasswordRegistro?.text==txtPasswordRegistroRep?.text{
             print("IF")

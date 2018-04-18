@@ -48,6 +48,10 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
             cell.lblColl?.text="negasonic"
             cell.imageC?.image=#imageLiteral(resourceName: "negasonic.jpg")
         }
+        else if(indexPath.row==3){
+            cell.lblColl?.text="Taco"
+            cell.imageC?.image=#imageLiteral(resourceName: "tacodeadpool.jpg")
+        }
         else if(indexPath.row==4){
             cell.lblColl?.text="Pool"
             cell.imageC?.image=#imageLiteral(resourceName: "good.jpg")

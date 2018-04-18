@@ -277,7 +277,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdaColeccion" id="Tau-Qz-bu5">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdaColeccion" id="Tau-Qz-bu5" customClass="CVCell" customModule="SegundHito" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -297,8 +297,16 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="imageC" destination="W2w-hw-n9b" id="AGi-KO-ElA"/>
+                                            <outlet property="lblColl" destination="Frx-qc-idf" id="7YP-34-MfM"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="k2v-xe-ipl" id="JTz-SA-weM"/>
+                                    <outlet property="delegate" destination="k2v-xe-ipl" id="Uqa-lM-9Et"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

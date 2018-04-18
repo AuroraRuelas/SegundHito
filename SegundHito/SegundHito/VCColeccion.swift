@@ -33,9 +33,30 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell=collectionView.dequeueReusableCell(withIdentifier: "celdaColeccion") as! TVCell
+        let cell:CVCell=collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
+        
+        if(indexPath.row==0){
+            
+            cell.lblColl?.text="Deadpool"
+            cell.imageC?.image=#imageLiteral(resourceName: "deadpool.png")
+        }
+        else if(indexPath.row==1){
+            cell.lblColl?.text="Colossus"
+            cell.imageC?.image=#imageLiteral(resourceName: "colosus.png")
+        }
+        else if(indexPath.row==2){
+            cell.lblColl?.text="negasonic"
+            cell.imageC?.image=#imageLiteral(resourceName: "negasonic.jpg")
+        }
+        else if(indexPath.row==4){
+            cell.lblColl?.text="Pool"
+            cell.imageC?.image=#imageLiteral(resourceName: "good.jpg")
+        }
         return cell
+        
     }
+        
+    
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,8 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet var txtPasswordLogin:UITextField?
     @IBOutlet var btnLogin:UIButton?
     @IBOutlet var btnRegistrar:UIButton?
+    
+    
 //    @IBAction func clickLogin(){
 //        print(" Usuario Pulso Login "+(txtPasswordLogin?.text)!)
 //        if txtUser?.text=="Aurora" && txtPasswordLogin?.text=="1234"{

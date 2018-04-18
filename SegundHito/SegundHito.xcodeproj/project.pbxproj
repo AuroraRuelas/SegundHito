@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4465EDC42087990D000E64B1 /* CVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EDC32087990D000E64B1 /* CVCell.swift */; };
+		4465EDC62087AA40000E64B1 /* LocationAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EDC52087AA40000E64B1 /* LocationAdmin.swift */; };
+		4465EDC82087B1D5000E64B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4465EDC72087B1D5000E64B1 /* MapKit.framework */; };
 		448EEBA12085DCC60028A72A /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EEBA02085DCC60028A72A /* Perfiles.swift */; };
 		448EEBA52085F4AF0028A72A /* VCTabla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EEBA42085F4AF0028A72A /* VCTabla.swift */; };
 		448EEBA72085FA5B0028A72A /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EEBA62085FA5B0028A72A /* TVCell.swift */; };
@@ -50,6 +52,8 @@
 		04A14978C69E9D18226B8549 /* Pods-SegundHitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegundHitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegundHitoUITests/Pods-SegundHitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A9F468CC3D39ADEB31AE851 /* Pods_SegundHitoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegundHitoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465EDC32087990D000E64B1 /* CVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCell.swift; sourceTree = "<group>"; };
+		4465EDC52087AA40000E64B1 /* LocationAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdmin.swift; sourceTree = "<group>"; };
+		4465EDC72087B1D5000E64B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		448EEBA02085DCC60028A72A /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
 		448EEBA42085F4AF0028A72A /* VCTabla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTabla.swift; sourceTree = "<group>"; };
 		448EEBA62085FA5B0028A72A /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4465EDC82087B1D5000E64B1 /* MapKit.framework in Frameworks */,
 				4C27076E59072281E62C42DD /* Pods_SegundHito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +152,7 @@
 				448EEBA62085FA5B0028A72A /* TVCell.swift */,
 				44C313B3207CAEDB00FA6670 /* DataHolder.swift */,
 				44C313B5207CB1F400FA6670 /* ViewControllerLogin.swift */,
+				4465EDC52087AA40000E64B1 /* LocationAdmin.swift */,
 			);
 			path = SegundHito;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 		9D21E752F98554905F35347C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4465EDC72087B1D5000E64B1 /* MapKit.framework */,
 				C8C37145C77A3C82C6F9E8C3 /* Pods_SegundHito.framework */,
 				02726D4BA390C481DAA858F7 /* Pods_SegundHitoTests.framework */,
 				3A9F468CC3D39ADEB31AE851 /* Pods_SegundHitoUITests.framework */,
@@ -270,6 +277,11 @@
 					44F370F1207C9CA700093323 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					44F37105207C9CA700093323 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -508,6 +520,7 @@
 				448EEBA72085FA5B0028A72A /* TVCell.swift in Sources */,
 				4465EDC42087990D000E64B1 /* CVCell.swift in Sources */,
 				44C313B8207CB9B200FA6670 /* ViewControllerRegistrar.swift in Sources */,
+				4465EDC62087AA40000E64B1 /* LocationAdmin.swift in Sources */,
 				448EEBA52085F4AF0028A72A /* VCTabla.swift in Sources */,
 				44F370F8207C9CA700093323 /* ViewController.swift in Sources */,
 				448EEBA12085DCC60028A72A /* Perfiles.swift in Sources */,

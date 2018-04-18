@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k2v-xe-ipl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-3B-mzA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,14 +25,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAT-9L-GoF" userLabel="Txt User">
-                                <rect key="frame" x="139" y="202" width="97" height="30"/>
+                                <rect key="frame" x="139" y="202" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WP4-bE-8da" userLabel="Txt Password Login">
-                                <rect key="frame" x="139" y="268" width="97" height="30"/>
+                                <rect key="frame" x="139" y="268" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -58,8 +58,8 @@
                                     <segue destination="NpQ-1Y-oMd" kind="show" identifier="trLoginCorr" id="pTc-qu-Gww"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-vi-00u">
-                                <rect key="frame" x="37" y="205" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-vi-00u">
+                                <rect key="frame" x="54" y="205" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="-2442" y="-392"/>
         </scene>
-        <!--Item-->
+        <!--Mapa-->
         <scene sceneID="lH5-Xv-PVs">
             <objects>
                 <viewController id="iiD-GO-oQc" sceneMemberID="viewController">
@@ -195,13 +195,13 @@
                         <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RPk-k9-PPh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eqk-Xm-s06"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" id="eqk-Xm-s06"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofy-Ar-4Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-364"/>
+            <point key="canvasLocation" x="526" y="-462"/>
         </scene>
-        <!--Item 2-->
+        <!--Listas-->
         <scene sceneID="f5m-ka-Bcc">
             <objects>
                 <viewController id="fhe-qi-AOH" customClass="VCTabla" customModule="SegundHito" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,16 +249,16 @@
                         <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="xIo-zt-oIM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TEE-d9-81t"/>
+                    <tabBarItem key="tabBarItem" title="Listas" id="TEE-d9-81t"/>
                     <connections>
                         <outlet property="miTabla" destination="XaW-q0-5Yh" id="rut-ZB-Kro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6J-bw-JPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525.60000000000002" y="-1166.2668665667168"/>
+            <point key="canvasLocation" x="526" y="-1124"/>
         </scene>
-        <!--Item 1-->
+        <!--Colecciones-->
         <scene sceneID="6mb-xd-cdO">
             <objects>
                 <viewController id="k2v-xe-ipl" customClass="VCColeccion" customModule="SegundHito" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,14 +312,14 @@
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tgd-KZ-2Jt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="goy-pj-VWE"/>
+                    <tabBarItem key="tabBarItem" title="Colecciones" id="goy-pj-VWE"/>
                     <connections>
                         <outlet property="colPrincipal" destination="5sl-Yr-n8U" id="3Zf-j4-1KH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpb-Nb-ia3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525.60000000000002" y="-1829.2353823088458"/>
+            <point key="canvasLocation" x="526" y="-1793"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NpS-hD-vyC">
@@ -345,7 +345,7 @@
         <image name="chimichanga" width="2500" height="1407"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lP5-e6-Cwe"/>
+        <segue reference="pTc-qu-Gww"/>
         <segue reference="ygH-EZ-XMh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

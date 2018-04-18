@@ -28,7 +28,7 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5;
+        return Int(DataHolder.sharedInstance.numeroCeldasColeccion);
     }
     
     

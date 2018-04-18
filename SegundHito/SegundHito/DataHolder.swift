@@ -11,6 +11,8 @@ import Firebase
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?
+    var numeroCeldasColeccion:UInt=5;
+    var locationAdmin:LocationAdmin?
 //    var sNick:String = "Aurora"
     
     var miPerfil:Perfiles = Perfiles()
@@ -18,5 +20,9 @@ class DataHolder: NSObject {
     func initFirebase()  {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()
+    }
+    
+    func initLocationAdmin() {
+        locationAdmin=LocationAdmin()
     }
 }

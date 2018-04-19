@@ -40,11 +40,11 @@
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>MENSAJE 4</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>MENSAJE 1</string>
+	<string>Permitee</string>
 	<key>NSLocationUsageDescription</key>
 	<string>MENSAJE 3</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>MENSAJE 2</string>
+	<string>Localizacion quiere saber</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

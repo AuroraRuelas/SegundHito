@@ -12,7 +12,7 @@ class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?
     var numeroCeldasColeccion:UInt=5;
-    var locationAdmin:LocationAdmin?
+//    var vcMapa:VCMapa?
 //    var sNick:String = "Aurora"
     
     var miPerfil:Perfiles = Perfiles()
@@ -21,8 +21,8 @@ class DataHolder: NSObject {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()
     }
-    
-    func initLocationAdmin() {
-        locationAdmin=LocationAdmin()
-    }
+//    
+//    func initLocationAdmin() {
+//        vcMapa=VCMapa()
+//    }
 }

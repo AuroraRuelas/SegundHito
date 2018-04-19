@@ -182,7 +182,7 @@
         <!--Mapa-->
         <scene sceneID="lH5-Xv-PVs">
             <objects>
-                <viewController id="iiD-GO-oQc" sceneMemberID="viewController">
+                <viewController id="iiD-GO-oQc" customClass="VCMapa" customModule="SegundHito" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6e-KJ-fZj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +196,9 @@
                         <viewLayoutGuide key="safeArea" id="RPk-k9-PPh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" id="eqk-Xm-s06"/>
+                    <connections>
+                        <outlet property="mapa" destination="Cf1-pL-Sg9" id="gyR-SS-qx0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofy-Ar-4Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

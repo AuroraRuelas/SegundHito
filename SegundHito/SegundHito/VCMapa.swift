@@ -28,7 +28,7 @@ class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
         
         
         
-//        mapa?.delegate=self
+        mapa?.delegate=self
         // Do any additional setup after loading the view.
     }
 

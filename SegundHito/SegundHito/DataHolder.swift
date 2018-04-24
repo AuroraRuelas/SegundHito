@@ -22,6 +22,9 @@ class DataHolder: NSObject {
     func initFirebase()  {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()
+//        let listasRef = firestoreDB?.collection("Listas")
+//        let coleccionRef = firestoreDB?.collection("Colecciones")
+        
     }
 
 //    

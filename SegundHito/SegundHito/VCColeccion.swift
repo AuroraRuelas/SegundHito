@@ -17,7 +17,16 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        DataHolder.sharedInstance.firestoreDB?.collection("Colecciones").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

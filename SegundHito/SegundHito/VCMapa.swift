@@ -24,8 +24,7 @@ class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
         locationManager?.requestAlwaysAuthorization()
         //        locationManager?.desiredAccuracy=kl
         
-        self.agregarPin(titulo: "Mexicali", latitude: 32.6469, longitud: -1154446)
-        
+        self.agregarPin(titulo: "Mexicali", latitude: 32.6469, longitud: -115.4446)
         
         
         mapa?.delegate=self

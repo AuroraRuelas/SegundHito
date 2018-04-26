@@ -14,7 +14,10 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
     var arNombre:[ColList] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DataHolder.sharedInstance.descargarColeccionListas()
+        func DHDdescargarColeccionListas(blFin: Bool){
+            
+        }
         DataHolder.sharedInstance.firestoreDB?.collection("Listas").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")

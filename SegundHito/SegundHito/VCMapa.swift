@@ -9,13 +9,13 @@
 import UIKit
 import MapKit
 import CoreLocation
-class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate , DataHolderDelegate{
+class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
     @IBOutlet var mapa:MKMapView?
     var locationManager:CLLocationManager?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataHolder.sharedInstance.descargarColeccionListas()
+//        DataHolder.sharedInstance.descargarColeccionListas()
         mapa?.showsUserLocation = true
         
         locationManager=CLLocationManager()
@@ -61,8 +61,8 @@ class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate , Da
         mapa?.addAnnotation(annotation)
     }
 //    func DHDescargarColeccionListasComplete(blFin: Bool) {
-//        if blFin = true {
-//            
+//        if blFin == true {
+//
 //        }
 //    }
 

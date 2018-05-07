@@ -17,12 +17,14 @@ class Perfiles: NSObject {
         sEmail = valores["email"] as? String
         sNombre = valores["first"] as? String
         sPassword = valores["password"] as? String
+
+        print(sNombre)
     }
     func getMap() -> [String:Any] {
-        var mapTemp:[String:Any] = [:]
-        mapTemp["email"] = sEmail
-        mapTemp["first"] = sNombre
-        mapTemp["password"] = sPassword
-        return mapTemp
+        var perfTemp:[String:Any] = [:]
+        perfTemp["email"] = sEmail
+        perfTemp["first"] = sNombre
+        perfTemp["password"] = sPassword
+        return perfTemp
     }
 }

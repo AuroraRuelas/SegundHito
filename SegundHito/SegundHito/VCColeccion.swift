@@ -9,10 +9,22 @@
 import UIKit
 
 class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+  
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("Consulta de filas para pintar")
+        return self.arNombre.count;
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:CVCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
+        cell.lblColl?.text = self.arNombre[indexPath.row].sNombre
+        return cell
+    }
+  
  
     
     @IBOutlet var colPrincipal:UICollectionView?
-       var arNombre:[ColList] = []
+       var arNombre:[ColCollec] = []
    
     
     
@@ -20,81 +32,80 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
      
         super.viewDidLoad()
         
-//        DataHolder.sharedInstance.firestoreDB?.collection("Colecciones").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    let nombre:ColList = ColList()
-//                    nombre.sID=document.documentID
-//                    nombre.setMap(valores: document.data())
-//                    self.arNombre.append(nombre)
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//                print("--->",self.arNombre.count)
-//                self.colPrincipal?.reloadData()
-//            }
-//            }
-//        }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("Consulta de filas para pintar")
-//        return self.arNombre.count;
-//    }
+        DataHolder.sharedInstance.firestoreDB?.collection("Colecciones").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let nombre:ColCollec = ColCollec()
+//                    var coleccion:ColCollec = ColCollec()
+//                    coleccion.setMap(valores: document.data())
+                    nombre.sID=document.documentID
+                    nombre.setMap(valores: document.data())
+                    self.arNombre.append(nombre)
+                    print("\(document.documentID) => \(document.data())")
+                }
+                print("--->",self.arNombre.count)
+                self.colPrincipal?.reloadData()
+            }
+            }
+        
+        }
+   
 //
 //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell:CVCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
 //        cell.lblColl?.text = self.arNombre[indexPath.row].sNombre
 //        return cell
 //    }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("He seleccionado" , indexPath.row)
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        print("He Deseleccionado" , indexPath.row)
-//    }
-        func didReceiveMemoryWarning() {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("He seleccionado" , indexPath.row)
+
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("He Deseleccionado" , indexPath.row)
+    }
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Do any additional setup after loading the view.
     }
 
 
         // Dispose of any resources that can be recreated.
-    }
+    
     
 
     
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:CVCell=collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
-
-        if(indexPath.row==0){
-
-            cell.lblColl?.text="Deadpool"
-            cell.imageC?.image=#imageLiteral(resourceName: "deadpool.png")
-        }
-        else if(indexPath.row==1){
-            cell.lblColl?.text="Colossus"
-            cell.imageC?.image=#imageLiteral(resourceName: "colosus.png")
-        }
-        else if(indexPath.row==2){
-            cell.lblColl?.text="negasonic"
-            cell.imageC?.image=#imageLiteral(resourceName: "negasonic.jpg")
-        }
-        else if(indexPath.row==3){
-            cell.lblColl?.text="Taco"
-            cell.imageC?.image=#imageLiteral(resourceName: "tacodeadpool.jpg")
-        }
-        else if(indexPath.row==4){
-            cell.lblColl?.text="Pool"
-            cell.imageC?.image=#imageLiteral(resourceName: "good.jpg")
-        }
-        return cell
-
-    }
 //
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell:CVCell=collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
+//
+//        if(indexPath.row==0){
+//
+//            cell.lblColl?.text="Deadpool"
+//            cell.imageC?.image=#imageLiteral(resourceName: "deadpool.png")
+//        }
+//        else if(indexPath.row==1){
+//            cell.lblColl?.text="Colossus"
+//            cell.imageC?.image=#imageLiteral(resourceName: "colosus.png")
+//        }
+//        else if(indexPath.row==2){
+//            cell.lblColl?.text="negasonic"
+//            cell.imageC?.image=#imageLiteral(resourceName: "negasonic.jpg")
+//        }
+//        else if(indexPath.row==3){
+//            cell.lblColl?.text="Taco"
+//            cell.imageC?.image=#imageLiteral(resourceName: "tacodeadpool.jpg")
+//        }
+//        else if(indexPath.row==4){
+//            cell.lblColl?.text="Pool"
+//            cell.imageC?.image=#imageLiteral(resourceName: "good.jpg")
+//        }
+//        return cell
+//
+//    }
+////
 
     /*
     // MARK: - Navigation

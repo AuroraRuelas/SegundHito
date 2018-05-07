@@ -44,6 +44,7 @@ class ViewControllerLogin: UIViewController {
                     let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Usuarios").document((user?.uid)!)
                         refPerfil?.getDocument { (document , error) in
                         if document != nil {
+                            
                             DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
                             self.performSegue(withIdentifier: "trLoginCorr", sender: self)
 

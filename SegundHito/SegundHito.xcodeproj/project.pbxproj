@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4417344920A08A7B004FA53C /* ColCollec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4417344820A08A7B004FA53C /* ColCollec.swift */; };
 		44525C51208F18EA008AEE16 /* ColList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44525C50208F18EA008AEE16 /* ColList.swift */; };
 		4457DE5D208879AB00D1D7D5 /* VCMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4457DE5C208879AB00D1D7D5 /* VCMapa.swift */; };
 		4465EDC42087990D000E64B1 /* CVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EDC32087990D000E64B1 /* CVCell.swift */; };
@@ -53,6 +54,7 @@
 		02726D4BA390C481DAA858F7 /* Pods_SegundHitoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegundHitoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A14978C69E9D18226B8549 /* Pods-SegundHitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegundHitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegundHitoUITests/Pods-SegundHitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A9F468CC3D39ADEB31AE851 /* Pods_SegundHitoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegundHitoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4417344820A08A7B004FA53C /* ColCollec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColCollec.swift; sourceTree = "<group>"; };
 		44525C50208F18EA008AEE16 /* ColList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColList.swift; sourceTree = "<group>"; };
 		4457DE5C208879AB00D1D7D5 /* VCMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapa.swift; sourceTree = "<group>"; };
 		4465EDC32087990D000E64B1 /* CVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCell.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				44F37101207C9CA700093323 /* Info.plist */,
 				448EEBA02085DCC60028A72A /* Perfiles.swift */,
 				44525C50208F18EA008AEE16 /* ColList.swift */,
+				4417344820A08A7B004FA53C /* ColCollec.swift */,
 				448EEBA62085FA5B0028A72A /* TVCell.swift */,
 				44C313B3207CAEDB00FA6670 /* DataHolder.swift */,
 				44C313B5207CB1F400FA6670 /* ViewControllerLogin.swift */,
@@ -526,6 +529,7 @@
 				448EEBA72085FA5B0028A72A /* TVCell.swift in Sources */,
 				4465EDC42087990D000E64B1 /* CVCell.swift in Sources */,
 				4457DE5D208879AB00D1D7D5 /* VCMapa.swift in Sources */,
+				4417344920A08A7B004FA53C /* ColCollec.swift in Sources */,
 				44525C51208F18EA008AEE16 /* ColList.swift in Sources */,
 				44C313B8207CB9B200FA6670 /* ViewControllerRegistrar.swift in Sources */,
 				4465EDC62087AA40000E64B1 /* LocationAdmin.swift in Sources */,

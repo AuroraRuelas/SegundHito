@@ -10,6 +10,7 @@ target 'SegundHito' do
     pod 'Firebase/Auth'
     pod 'Firebase/Firestore'
     pod 'Firebase/Database'
+    pod 'Firebase/Storage'
     
   target 'SegundHitoTests' do
     inherit! :search_paths

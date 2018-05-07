@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-//import FirebaseStorage
+import Fire
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?
+    var firStorage:Storage?
     var numeroCeldasColeccion:UInt=5;
     var firDataBaseRef: DatabaseReference!
 //    var vcMapa:VCMapa?
@@ -23,7 +24,7 @@ class DataHolder: NSObject {
     func initFirebase()  {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()
-//        firStorage = Storage.storage()
+       firStorage = Storage.storage()
         
 //        let listasRef = firestoreDB?.collection("Listas")
 //        let coleccionRef = firestoreDB?.collection("Colecciones")

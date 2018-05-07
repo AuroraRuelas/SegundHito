@@ -31,6 +31,7 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
                 }
                 print("--->",self.arNombre.count)
                 self.miTabla?.reloadData()
+                self.refreshUI()
             }
         }
         
@@ -47,6 +48,7 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
         
         let cell:TVCell = tableView.dequeueReusableCell(withIdentifier: "miCelda") as! TVCell
         cell.labelNombre?.text = self.arNombre[indexPath.row].sNombre
+        
 //        if(indexPath.row==0){
 //        cell.labelNombre?.text="Chimichanga"
 //        cell.imagen?.image=#imageLiteral(resourceName: "chimichanga.jpg")
@@ -70,6 +72,7 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("He seleccionado" , indexPath.row)
     }
@@ -78,15 +81,21 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
         print("He Deseleccionado" , indexPath.row)
     }
     
-    
+    func refreshUI(){
+        
+        DispatchQueue.main.async (execute:{
+            self.miTabla?.reloadData()
+        })
+    }
+
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-     
+}
         // Do any additional setup after loading the view.
-    }
+
 
 
     

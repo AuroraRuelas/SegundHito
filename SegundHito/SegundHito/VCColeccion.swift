@@ -32,10 +32,11 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
      
         super.viewDidLoad()
         
-        DataHolder.sharedInstance.firestoreDB?.collection("Colecciones").getDocuments() { (querySnapshot, err) in
+        DataHolder.sharedInstance.firestoreDB?.collection("Colecciones").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                self.arNombre=[]
                 for document in querySnapshot!.documents {
                     let nombre:ColCollec = ColCollec()
 //                    var coleccion:ColCollec = ColCollec()
@@ -47,6 +48,7 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
                 }
                 print("--->",self.arNombre.count)
                 self.colPrincipal?.reloadData()
+                
             }
             }
         

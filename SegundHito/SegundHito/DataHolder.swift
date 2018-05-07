@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-import Fire
+import FirebaseStorage
+
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?

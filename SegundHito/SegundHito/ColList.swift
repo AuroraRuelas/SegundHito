@@ -10,18 +10,21 @@ import UIKit
 
 class ColList: NSObject {
     let IDNOMBRE = "nombre"
-//    let IDIMAGEN = "imagen"
+    let IDURLIMAGEN = "url_image"
     var sID:String?
     var sNombre:String?
     var iImagen:UIImage?
+    var sUrlImage:String?
     func setMap(valores:[String:Any]) {
         sNombre = valores[IDNOMBRE] as! String
-//        iImagen = valores[IDIMAGEN] as! UIImage
+        sUrlImage = valores[IDURLIMAGEN] as? String
+
     }
     func getMap() -> [String:Any] {
         return[
             IDNOMBRE: sNombre as Any,
-//            IDIMAGEN: iImagen as Any
+            IDURLIMAGEN: sUrlImage as Any,
+
         ]
     }
 }

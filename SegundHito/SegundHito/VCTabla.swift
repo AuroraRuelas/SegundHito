@@ -44,10 +44,12 @@ class VCTabla: UIViewController, UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         let cell:TVCell = tableView.dequeueReusableCell(withIdentifier: "miCelda") as! TVCell
         cell.labelNombre?.text = self.arNombre[indexPath.row].sNombre
+        cell.mostrarImagenes(uri: self.arNombre[indexPath.row].sUrlImage!)
+        
+        
+        
         
 //        if(indexPath.row==0){
 //        cell.labelNombre?.text="Chimichanga"

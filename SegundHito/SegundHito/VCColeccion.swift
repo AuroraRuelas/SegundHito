@@ -18,6 +18,7 @@ class VCColeccion: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CVCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaColeccion", for: indexPath) as! CVCell
         cell.lblColl?.text = self.arNombre[indexPath.row].sNombre
+        cell.mostrarImagenes(uri: self.arNombre[indexPath.row].iImagen!)
         return cell
     }
   

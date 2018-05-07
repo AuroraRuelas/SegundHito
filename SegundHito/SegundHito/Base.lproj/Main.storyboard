@@ -224,7 +224,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chimichanga" translatesAutoresizingMaskIntoConstraints="NO" id="6zp-Wd-DZb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zp-Wd-DZb">
                                                     <rect key="frame" x="15" y="11" width="109" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -345,9 +345,6 @@
             <point key="canvasLocation" x="-874" y="-716"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="chimichanga" width="2500" height="1407"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lP5-e6-Cwe"/>
         <segue reference="ygH-EZ-XMh"/>

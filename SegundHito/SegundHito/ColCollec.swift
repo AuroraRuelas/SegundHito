@@ -10,18 +10,20 @@ import UIKit
 
 class ColCollec: NSObject {
     let IDNOMBREC = "nombre"
-    //    let IDIMAGEN = "imagen"
+    let IDIMAGEN = "url_image"
     var sID:String?
     var sNombre:String?
-    var iImagen:UIImage?
+    var iImagen:String?
+    
+
     func setMap(valores:[String:Any]) {
         sNombre = valores[IDNOMBREC] as! String
-        //        iImagen = valores[IDIMAGEN] as! UIImage
+        iImagen = valores[IDIMAGEN] as! String
     }
     func getMap() -> [String:Any] {
         return[
             IDNOMBREC: sNombre as Any,
-            //            IDIMAGEN: iImagen as Any
+            IDIMAGEN: iImagen as Any
         ]
     }
     

@@ -31,36 +31,36 @@ class DataHolder: NSObject {
 //        let coleccionRef = firestoreDB?.collection("Colecciones")
         
     }
-//    func descargarColeccionListas() -> Bool {
-//        var blFin:Bool = false; DataHolder.sharedInstance.firestoreDB?.collection("Listas").addSnapshotListener { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                blFin=false
-//
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    let nombre:ColList = ColList()
-//                    nombre.sID=document.documentID
-//                    nombre.setMap(valores: document.data())
-//                    self.arNombre.append(nombre)
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//                print("--->",self.arNombre.count)
-////                self.miTabla?.reloadData()
-//                blFin = true
-//            }
-//        }
-//       return blFin
-//    }
-//}
-//@objc protocol DataHolderDelegate{
-//func DHDdescargarColeccionListasComplete()
-//
-//}
+    func descargarColeccionListas() -> Bool {
+        var blFin:Bool = false; DataHolder.sharedInstance.firestoreDB?.collection("Listas").addSnapshotListener { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                blFin=false
+
+            } else {
+                for document in querySnapshot!.documents {
+                    let nombre:ColList = ColList()
+                    nombre.sID=document.documentID
+                    nombre.setMap(valores: document.data())
+                    self.arNombre.append(nombre)
+                    print("\(document.documentID) => \(document.data())")
+                }
+                print("--->",self.arNombre.count)
+//                self.miTabla?.reloadData()
+                blFin = true
+            }
+        }
+       return blFin
+    }
+}
+@objc protocol DataHolderDelegate{
+func DHDdescargarColeccionListasComplete()
+
+}
 
     
 //    
 //    func initLocationAdmin() {
 //        vcMapa=VCMapa()
-    }
+    
 

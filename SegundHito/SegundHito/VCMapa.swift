@@ -60,11 +60,11 @@ class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
         annotation.title = titulo
         mapa?.addAnnotation(annotation)
     }
-//    func DHDescargarColeccionListasComplete(blFin: Bool) {
-//        if blFin == true {
-//
-//
-//        }
-//    }
+    func DHDescargarColeccionListasComplete(blFin: Bool) {
+        if blFin == true {
+
+
+        }
+    }
 
 }

@@ -36,7 +36,7 @@ class DataHolder: NSObject {
 //            if let err = err {
 //                print("Error getting documents: \(err)")
 //                blFin=false
-//                
+//
 //            } else {
 //                for document in querySnapshot!.documents {
 //                    let nombre:ColList = ColList()
@@ -52,9 +52,9 @@ class DataHolder: NSObject {
 //        }
 //       return blFin
 //    }
-}
+//}
 //@objc protocol DataHolderDelegate{
-//    @objc optional func DHDdescargarColeccionListas()
+//func DHDdescargarColeccionListasComplete()
 //
 //}
 
@@ -62,5 +62,5 @@ class DataHolder: NSObject {
 //    
 //    func initLocationAdmin() {
 //        vcMapa=VCMapa()
-//    }
+    }
 

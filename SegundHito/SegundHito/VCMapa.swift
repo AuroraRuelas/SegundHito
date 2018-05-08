@@ -63,6 +63,7 @@ class VCMapa: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
 //    func DHDescargarColeccionListasComplete(blFin: Bool) {
 //        if blFin == true {
 //
+//
 //        }
 //    }
 

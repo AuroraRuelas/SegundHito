@@ -52,13 +52,39 @@ class DataHolder: NSObject {
         }
        return blFin
     }
-}
-@objc protocol DataHolderDelegate{
-func DHDdescargarColeccionListasComplete()
-
-}
-
     
+   
+
+ func descargarColeccion() -> Bool {
+    var blFinC:Bool = false; DataHolder.sharedInstance.firestoreDB?.collection("Coleccion").addSnapshotListener { (querySnapshot, err) in
+    if let err = err {
+    print("Error getting documents: \(err)")
+    blFinC=false
+    
+    } else {
+    for document in querySnapshot!.documents {
+    let nombre:ColList = ColList()
+    nombre.sID=document.documentID
+    nombre.setMap(valores: document.data())
+    self.arNombre.append(nombre)
+    print("\(document.documentID) => \(document.data())")
+    }
+    print("--->",self.arNombre.count)
+    //                self.miTabla?.reloadData()
+    blFinC = true
+    }
+    }
+    return blFinC
+}
+    
+
+}
+
+@objc protocol DataHolderDelegate{
+    func descargarColeccionListas()
+    func descargarColeccion()
+    
+}
 //    
 //    func initLocationAdmin() {
 //        vcMapa=VCMapa()

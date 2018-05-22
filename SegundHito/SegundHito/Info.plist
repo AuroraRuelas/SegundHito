@@ -45,6 +45,8 @@
 	<string>MENSAJE 3</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Localizacion quiere saber</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>QUIERO ACCEDER A LA GALERIA</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

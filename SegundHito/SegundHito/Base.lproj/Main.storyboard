@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-3B-mzA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,8 +59,8 @@
                                     <constraint firstAttribute="bottom" secondItem="XG4-cQ-aMW" secondAttribute="bottom" constant="14" id="TaJ-le-Ygw"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXm-8z-mf2">
-                                <rect key="frame" x="16" y="49" width="343" height="320"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXm-8z-mf2">
+                                <rect key="frame" x="0.0" y="47" width="343" height="320"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAT-9L-GoF" userLabel="Txt User">
                                         <rect key="frame" x="102" y="141" width="161" height="30"/>
@@ -265,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHy-8J-ygC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1834" y="-401"/>
+            <point key="canvasLocation" x="-1799" y="-320"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="lH5-Xv-PVs">
@@ -297,6 +297,64 @@
             </objects>
             <point key="canvasLocation" x="526" y="-462"/>
         </scene>
+        <!--Upload-->
+        <scene sceneID="4uq-88-sLg">
+            <objects>
+                <viewController id="fO8-EG-2hg" customClass="VCSeleccionar" customModule="SegundHito" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p2N-iu-mSa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-Xo-Qbp">
+                                <rect key="frame" x="16" y="79" width="343" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkV-w6-gRp">
+                                <rect key="frame" x="247" y="444" width="74" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="CAMARA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="accionBtnCam" destination="fO8-EG-2hg" eventType="touchUpInside" id="0H3-CE-aBt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-2T-fvz">
+                                <rect key="frame" x="126" y="505" width="123" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <state key="normal" title="Subir a Firebase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="accionBtnSubir" destination="fO8-EG-2hg" eventType="touchUpInside" id="Eib-TF-Ju9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-3E-Rl7">
+                                <rect key="frame" x="0.0" y="444" width="168" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="MI GALERIA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="accionBtnGal" destination="fO8-EG-2hg" eventType="touchUpInside" id="5n6-V1-8le"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33155286312103271" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B8o-Nh-49z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" id="iim-qh-nau"/>
+                    <connections>
+                        <outlet property="imageView" destination="iUt-Xo-Qbp" id="CAb-al-eW6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFB-To-2HX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525.60000000000002" y="231.63418290854574"/>
+        </scene>
         <!--Listas-->
         <scene sceneID="f5m-ka-Bcc">
             <objects>
@@ -309,7 +367,7 @@
                                 <rect key="frame" x="16" y="20" width="343" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="miCelda" rowHeight="112" id="yDi-si-XrW" customClass="TVCell" customModule="SegundHito" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="miCelda" rowHeight="112" id="yDi-si-XrW" customClass="TVCell" customModule="SegundHito" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yDi-si-XrW" id="02v-9S-Otv">
@@ -396,10 +454,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-hw-n9b">
-                                                    <rect key="frame" x="4" y="8" width="125" height="122"/>
+                                                    <rect key="frame" x="4" y="8" width="125" height="123"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frx-qc-idf">
-                                                    <rect key="frame" x="4" y="129" width="131" height="21"/>
+                                                    <rect key="frame" x="39" y="131" width="131" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -458,18 +516,20 @@
                         <segue destination="iiD-GO-oQc" kind="relationship" relationship="viewControllers" id="0aK-1l-dTf"/>
                         <segue destination="k2v-xe-ipl" kind="relationship" relationship="viewControllers" id="KkK-4H-6VK"/>
                         <segue destination="fhe-qi-AOH" kind="relationship" relationship="viewControllers" id="MPB-m0-3KE"/>
+                        <segue destination="fO8-EG-2hg" kind="relationship" relationship="viewControllers" id="OU0-jP-1uA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70m-Jo-E0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874" y="-716"/>
+            <point key="canvasLocation" x="-938" y="-321"/>
         </scene>
     </scenes>
     <resources>
         <image name="wallpaper2you_137564" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ygH-EZ-XMh"/>
+        <segue reference="lP5-e6-Cwe"/>
+        <segue reference="b36-bD-tg9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

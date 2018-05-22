@@ -17,15 +17,23 @@ class DataHolder: NSObject {
     var firStorage:Storage?
     var numeroCeldasColeccion:UInt=5;
     var firDataBaseRef: DatabaseReference!
+    var firStorageRef:StorageReference?
 //    var vcMapa:VCMapa?
 //    var sNick:String = "Aurora"
     var fireStoreDB:Firestore?
     var miPerfil:Perfiles = Perfiles()
     var arNombre:[ColList] = []
+    
+    
     func initFirebase()  {
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()
        firStorage = Storage.storage()
+        firDataBaseRef =
+            Database.database().reference().child("Swift")
+            firStorage = Storage.storage()
+        firStorageRef = firStorage?.reference()
+        
         
 //        let listasRef = firestoreDB?.collection("Listas")
 //        let coleccionRef = firestoreDB?.collection("Colecciones")
@@ -85,6 +93,7 @@ class DataHolder: NSObject {
     func descargarColeccion()
     
 }
+
 //    
 //    func initLocationAdmin() {
 //        vcMapa=VCMapa()

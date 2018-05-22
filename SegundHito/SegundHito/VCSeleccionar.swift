@@ -35,7 +35,11 @@ class VCSeleccionar: UIViewController, UIImagePickerControllerDelegate,UINavigat
         self.present(imagePicker, animated: true, completion: nil)
     }
     @IBAction func accionBtnSubir(){
-        let imgRef = DataHolder.sharedInstance.firStorageRef?.child("UP/miimagen.jpg")
+        let fecha:Date = Date()
+        let tiempoEnMillis = Int64((fecha.timeIntervalSince1970*1000.0).rounded())
+        
+        let rutaFicher:String = String(format: "UP/miimagen_%d.jpg", tiempoEnMillis)
+        let imgRef = DataHolder.sharedInstance.firStorageRef?.child(rutaFicher)
         
         let uploadTask = imgRef?.putData(imgData! as Data ,metadata:nil){ (metadata,error)
             in
